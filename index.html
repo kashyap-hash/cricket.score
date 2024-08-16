@@ -3,184 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Score Tracker</title>
+    <title>Pasudavakhana Cricket Board</title>
     <style>
         body {
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #1A237E;
-            color: white;
-            padding: 20px;
+        h1, h2 {
             text-align: center;
-        }
-        nav {
-            background-color: #3949AB;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #1A237E;
-        }
-        .section {
-            padding: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
             color: #1A237E;
         }
-
-        /* Runs Section */
-        .runs-section .player-card {
-            background: linear-gradient(135deg, #42A5F5, #1E88E5);
-            color: white;
+        .section {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-            margin: 10px 0;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .runs-section .player-card img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 20px;
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
         }
-        .runs-section .player-card .info {
-            flex-grow: 1;
+        .ranking-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .runs-section .player-card .info h3 {
-            margin: 0;
-        }
-        .runs-section .player-card .info p {
-            margin: 5px 0;
-        }
-        
-        /* Wickets Section */
-        .wickets-section .player-block {
-            background: linear-gradient(135deg, #424242, #212121);
-            color: white;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
+        .ranking-list li {
+            background-color: #e3f2fd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: box-shadow 0.3s ease;
         }
-        .wickets-section .player-block .position {
+        .ranking-list li:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .ranking-list li h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #0D47A1;
+        }
+        .ranking-list li p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+        }
+        .ranking-number {
             font-size: 1.5em;
             font-weight: bold;
-        }
-        .wickets-section .player-block .details {
-            flex-grow: 1;
-            margin-left: 20px;
-        }
-        .wickets-section .player-block .details h3 {
-            margin: 0;
-        }
-        .wickets-section .player-block .details p {
-            margin: 5px 0;
-        }
-
-        /* Sixes Section */
-        .sixes-section .player-tile {
-            background: linear-gradient(135deg, #66BB6A, #388E3C);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 10px;
-            flex-basis: calc(33.333% - 20px);
-        }
-        .sixes-section .player-tile h3 {
-            margin: 0;
-        }
-        .sixes-section .player-tile p {
-            margin: 5px 0;
-            font-size: 1.2em;
-        }
-
-        .sixes-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        @media (max-width: 768px) {
-            .sixes-section .player-tile {
-                flex-basis: calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .sixes-section .player-tile {
-                flex-basis: calc(100% - 20px);
-            }
+            color: #0D47A1;
+            margin-right: 15px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Cricket Score Tracker</h1>
-    </header>
+    <h1>Pasudavakhana Cricket Board Scores</h1>
 
-    <nav>
-        <a href="#runs">Runs</a>
-        <a href="#wickets">Wickets</a>
-        <a href="#sixes">Sixes</a>
-    </nav>
+    <!-- Runs Section -->
+    <div class="section">
+        <h2>Top 5 Players - Runs</h2>
+        <ul class="ranking-list">
+            <li>
+                <div class="ranking-number">1</div>
+                <div>
+                    <h3>Ravi Sharma</h3>
+                    <p>Runs: 1200 | Matches: 20</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">2</div>
+                <div>
+                    <h3>Vikas Patel</h3>
+                    <p>Runs: 1150 | Matches: 22</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">3</div>
+                <div>
+                    <h3>Amit Kumar</h3>
+                    <p>Runs: 1100 | Matches: 21</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">4</div>
+                <div>
+                    <h3>Rahul Singh</h3>
+                    <p>Runs: 1050 | Matches: 18</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">5</div>
+                <div>
+                    <h3>Manoj Das</h3>
+                    <p>Runs: 1000 | Matches: 23</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-    <section id="runs" class="section runs-section">
-        <h2>Top 10 Players - Runs</h2>
-        <div class="player-card">
-            <img src="player1.jpg" alt="Player 1">
-            <div class="info">
-                <h3>Player 1</h3>
-                <p>Runs: 1200</p>
-                <p>Matches: 25</p>
-            </div>
-        </div>
-        <!-- Repeat the player-card for more players -->
-    </section>
+    <!-- Wickets Section -->
+    <div class="section">
+        <h2>Top 5 Players - Wickets</h2>
+        <ul class="ranking-list">
+            <li>
+                <div class="ranking-number">1</div>
+                <div>
+                    <h3>Praveen Kumar</h3>
+                    <p>Wickets: 30 | Matches: 20</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">2</div>
+                <div>
+                    <h3>Anil Rathod</h3>
+                    <p>Wickets: 28 | Matches: 22</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">3</div>
+                <div>
+                    <h3>Deepak Singh</h3>
+                    <p>Wickets: 26 | Matches: 21</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">4</div>
+                <div>
+                    <h3>Shankar Yadav</h3>
+                    <p>Wickets: 24 | Matches: 18</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">5</div>
+                <div>
+                    <h3>Vikram Thakur</h3>
+                    <p>Wickets: 22 | Matches: 23</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-    <section id="wickets" class="section wickets-section">
-        <h2>Top 10 Players - Wickets</h2>
-        <div class="player-block">
-            <div class="position">1</div>
-            <div class="details">
-                <h3>Player 1</h3>
-                <p>Wickets: 50</p>
-                <p>Matches: 25</p>
-            </div>
-        </div>
-        <!-- Repeat the player-block for more players -->
-    </section>
-
-    <section id="sixes" class="section sixes-section">
-        <h2>Top 10 Players - Sixes</h2>
-        <div class="sixes-grid">
-            <div class="player-tile">
-                <h3>Player 1</h3>
-                <p>Sixes: 30</p>
-                <p>Matches: 25</p>
-            </div>
-            <!-- Repeat the player-tile for more players -->
-        </div>
-    </section>
+    <!-- Sixes Section -->
+    <div class="section">
+        <h2>Top 5 Players - Sixes</h2>
+        <ul class="ranking-list">
+            <li>
+                <div class="ranking-number">1</div>
+                <div>
+                    <h3>Rohit Sharma</h3>
+                    <p>Sixes: 50 | Matches: 20</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">2</div>
+                <div>
+                    <h3>Virat Kohli</h3>
+                    <p>Sixes: 48 | Matches: 22</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">3</div>
+                <div>
+                    <h3>Shikhar Dhawan</h3>
+                    <p>Sixes: 45 | Matches: 21</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">4</div>
+                <div>
+                    <h3>KL Rahul</h3>
+                    <p>Sixes: 42 | Matches: 18</p>
+                </div>
+            </li>
+            <li>
+                <div class="ranking-number">5</div>
+                <div>
+                    <h3>Suryakumar Yadav</h3>
+                    <p>Sixes: 40 | Matches: 23</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 </body>
 </html>
