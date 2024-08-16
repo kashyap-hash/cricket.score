@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Score Tracker</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #1A237E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #3949AB;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #1A237E;
+        }
+        .section {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1A237E;
+        }
+
+        /* Runs Section */
+        .runs-section .player-card {
+            background: linear-gradient(135deg, #42A5F5, #1E88E5);
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .runs-section .player-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .runs-section .player-card .info {
+            flex-grow: 1;
+        }
+        .runs-section .player-card .info h3 {
+            margin: 0;
+        }
+        .runs-section .player-card .info p {
+            margin: 5px 0;
+        }
+        
+        /* Wickets Section */
+        .wickets-section .player-block {
+            background: linear-gradient(135deg, #424242, #212121);
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .wickets-section .player-block .position {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .wickets-section .player-block .details {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .wickets-section .player-block .details h3 {
+            margin: 0;
+        }
+        .wickets-section .player-block .details p {
+            margin: 5px 0;
+        }
+
+        /* Sixes Section */
+        .sixes-section .player-tile {
+            background: linear-gradient(135deg, #66BB6A, #388E3C);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            flex-basis: calc(33.333% - 20px);
+        }
+        .sixes-section .player-tile h3 {
+            margin: 0;
+        }
+        .sixes-section .player-tile p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .sixes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        @media (max-width: 768px) {
+            .sixes-section .player-tile {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sixes-section .player-tile {
+                flex-basis: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cricket Score Tracker</h1>
+    </header>
+
+    <nav>
+        <a href="#runs">Runs</a>
+        <a href="#wickets">Wickets</a>
+        <a href="#sixes">Sixes</a>
+    </nav>
+
+    <section id="runs" class="section runs-section">
+        <h2>Top 10 Players - Runs</h2>
+        <div class="player-card">
+            <img src="player1.jpg" alt="Player 1">
+            <div class="info">
+                <h3>Player 1</h3>
+                <p>Runs: 1200</p>
+                <p>Matches: 25</p>
+            </div>
+        </div>
+        <!-- Repeat the player-card for more players -->
+    </section>
+
+    <section id="wickets" class="section wickets-section">
+        <h2>Top 10 Players - Wickets</h2>
+        <div class="player-block">
+            <div class="position">1</div>
+            <div class="details">
+                <h3>Player 1</h3>
+                <p>Wickets: 50</p>
+                <p>Matches: 25</p>
+            </div>
+        </div>
+        <!-- Repeat the player-block for more players -->
+    </section>
+
+    <section id="sixes" class="section sixes-section">
+        <h2>Top 10 Players - Sixes</h2>
+        <div class="sixes-grid">
+            <div class="player-tile">
+                <h3>Player 1</h3>
+                <p>Sixes: 30</p>
+                <p>Matches: 25</p>
+            </div>
+            <!-- Repeat the player-tile for more players -->
+        </div>
+    </section>
+
+</body>
+</html>
